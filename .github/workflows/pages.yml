@@ -31,16 +31,13 @@ jobs:
     - name: Install DocFX
       run: dotnet tool update -g docfx
 
-    - name: Debug:list repo files
-      run: ls -R
-      
-    - name: Debug:list current working directory
-      run: |
-        cd DocumentationTest
-        ls
+    - name: Generate metadata
+      working-directory: ./DocumentationTest
+      run: docfx metadata docfx.json
 
     - name: Build documentation
-      run: docfx DocumentationTest/docfx.json
+      working-directory: ./DocumentationTest
+      run: docfx build docfx.json
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
