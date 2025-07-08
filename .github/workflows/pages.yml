@@ -33,6 +33,9 @@ jobs:
 
     - name: Debug:list repo files
       run: ls -R
+      
+    - name: Debug:list current working directory
+      run: ls
 
     - name: Build documentation
       working-directory: ./DocumentationTest
