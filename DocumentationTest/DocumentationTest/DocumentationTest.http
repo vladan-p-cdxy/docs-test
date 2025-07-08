@@ -1,0 +1,6 @@
+@DocumentationTest_HostAddress = http://localhost:5084
+
+GET {{DocumentationTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
