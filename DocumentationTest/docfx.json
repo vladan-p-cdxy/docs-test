@@ -1,10 +1,13 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
         {
-          "files": [ "*.csproj" ],
-          "cwd": "DocumentationTest"
+          "src": "../DocumentationTest",
+          "files": [
+            "**/*.csproj"
+          ]
         }
       ],
       "dest": "api"
@@ -12,11 +15,32 @@
   ],
   "build": {
     "content": [
-      { "files": [ "index.md" ] },
-      { "files": [ "toc.yml" ] },
-      { "files": [ "api/**.yml" ] },
-      { "files": [ "api/index.md" ], "exclude": [ "**/bin/**", "**/obj/**" ] }
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
     ],
-    "dest": "_site"
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "DocumentationTest",
+      "_appTitle": "DocumentationTest",
+      "_enableSearch": true,
+      "pdf": true
+    }
   }
 }
