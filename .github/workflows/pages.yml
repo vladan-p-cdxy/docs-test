@@ -35,7 +35,9 @@ jobs:
       run: ls -R
       
     - name: Debug:list current working directory
-      run: ls
+      run: |
+        cd DocumentationTest
+        ls
 
     - name: Build documentation
       run: docfx DocumentationTest/docfx.json
