@@ -51,7 +51,7 @@ namespace DocumentationTest.Controllers
         /// <returns>Age of the individual in years (as an integer).</returns>
         /// <remarks>This code is not guaranteed to be correct for non-UK locales, as some countries have skipped certain dates
         /// within living memory.</remarks>
-        public static int AgeAt(this DateOnly dateOfBirth, DateOnly date)
+        public static int AgeAt(DateOnly dateOfBirth, DateOnly date)
         {
             int age = date.Year - dateOfBirth.Year;
 
