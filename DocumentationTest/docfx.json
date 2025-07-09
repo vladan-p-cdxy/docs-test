@@ -9,11 +9,15 @@
             "**/*.csproj"
           ]
         }
-      ],
-      "dest": "api"
+      ]
     }
   ],
   "build": {
+    "fileMetadata": {
+      "pdf": {
+        "api/**/toc.yml": true
+      }
+    },
     "content": [
       {
         "files": [
