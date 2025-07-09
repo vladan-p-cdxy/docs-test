@@ -9,15 +9,11 @@
             "**/*.csproj"
           ]
         }
-      ]
+      ],
+      "dest": "api"
     }
   ],
   "build": {
-    "fileMetadata": {
-      "pdf": {
-        "api/**/toc.yml": true
-      }
-    },
     "content": [
       {
         "files": [
@@ -45,6 +41,11 @@
       "_appTitle": "DocumentationTest",
       "_enableSearch": true,
       "pdf": true
+    },
+    "fileMetadata": {
+      "pdf": {
+        "api/**/toc.yml": true
+      }
     }
   }
 }
