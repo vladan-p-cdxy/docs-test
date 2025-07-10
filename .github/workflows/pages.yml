@@ -39,6 +39,10 @@ jobs:
       working-directory: ./DocumentationTest
       run: docfx build docfx.json
 
+    - name: Generate PDF
+      working-directory: ./DocumentationTest
+      run: docfx pdf docfx.json
+
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
       with:

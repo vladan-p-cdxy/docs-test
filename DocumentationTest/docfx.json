@@ -48,8 +48,14 @@
       }
     }
   },
-  "pdf":
-  {
-    
-  }
+  "pdf": {
+  "content": [
+    {
+      "files": [
+        "toc.yml"
+      ]
+    }
+  ],
+  "dest": "_site/pdf/DocumentationTest.pdf"
+}
 }
