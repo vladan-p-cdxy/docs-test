@@ -47,5 +47,9 @@
         "api/**/toc.yml": true
       }
     }
+  },
+  "pdf":
+  {
+    
   }
 }
